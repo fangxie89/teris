@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #root {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      #panel {
+        width: var(--width);
+        height: var(--height);
+        background: #000;
+        position: relative;
+      }
+      #next {
+        width: 120px;
+        height: 120px;
+        position: relative;
+      }
+      #buttonGroup {
+        display: flex;
+        gap: 10px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+      #buttonGroup div {
+        padding: 3px 5px;
+        outline: 1px solid #000;
+        cursor: pointer;
+      }
+      #notification {
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        z-index: 999;
+        background: rgba(255,255,255,.7);
+        display: none;
+        justify-content: center;
+        align-items: center;    
+        font-size: 2em;
+    }
+    #side {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #next {
+        padding: 10px;
+    }
+    #score-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+
+    }
+    #score {
+        text-align: center;
+        color: red;
+    }
+    #hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="panel">
+        <div id="notification"></div>
+      </div>
+      <div id="side">
+        <div id="next"></div>
+        <div id="score-container">
+            score: <span id="score"></span>
+        </div>
+        <div id="hint">
+            <div>↑ rotate</div><div>↓ drop</div><div>← Left</div><div>→ Right</div><div>Space Start/Pause</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
